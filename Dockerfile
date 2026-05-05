@@ -6,7 +6,7 @@ ENV APP_PORT=8080
 
 RUN dnf -y install httpd && \
     dnf clean all && \
-    sed -i 's/Listen 80/Listen ${HTTP_PORT}/g' /etc/httpd/conf/httpd.conf && \
+    sed -i 's/Listen 80/Listen ${APP_PORT}/g' /etc/httpd/conf/httpd.conf && \
     chgrp -R 0 /var/log/httpd /var/run/httpd && \
     chmod -R g=u /var/log/httpd /var/run/httpd
 
