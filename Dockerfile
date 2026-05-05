@@ -25,4 +25,4 @@ EXPOSE ${APP_PORT}
 
 USER 1001
 
-CMD /usr/sbin/httpd -DFOREGROUN
+CMD /usr/sbin/httpd -DFOREGROUND
